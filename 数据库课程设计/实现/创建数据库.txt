@@ -1,0 +1,13 @@
+create database StoreSystem
+on primary
+(name=StoreSystem_data,
+filename='d:\StoreSystem_data.mdf',
+size=10,
+maxsize=100,
+filegrowth=10)
+log on
+(name=StoreSystem_log,
+filename='d:\StoreSystem_data.ldf',
+size=20,
+maxsize=200,
+filegrowth=10)

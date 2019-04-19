@@ -1,0 +1,5 @@
+create table Classification
+(Cno	char(5)	primary key,
+Cname	Varchar(20)	not null,
+Sno	char(3)	not null,
+foreign	key	(Sno)	references	Storehouse(Sno),)

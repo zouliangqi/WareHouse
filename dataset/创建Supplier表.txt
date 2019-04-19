@@ -1,0 +1,4 @@
+create table Supplier
+(SUno	char(6)	primary key,
+SUname	Varchar(20)	not null,
+SUremark	Varchar(100),)

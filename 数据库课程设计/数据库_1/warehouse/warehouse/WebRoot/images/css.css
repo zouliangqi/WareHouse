@@ -1,0 +1,80 @@
+/* CSS Document */
+body {
+	margin-top: 0px; padding:0; overflow:hidden;
+}
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+a:active {
+	text-decoration: none;
+}
+
+a.c{color: #000000; font-size:16px;
+    font-family: "¿¬Ìå_GB2312";}
+a.c:visited{  
+    color:#333333;
+	font-family: "¿¬Ìå_GB2312";
+	font-size: 18px;
+	font-style: normal;
+	font-weight: bold;}
+a.c:hover{
+	color: #FF0000;
+	font-family: "¿¬Ìå_GB2312";
+	font-size: 18px;
+	font-style: normal;
+	font-weight: bold;
+}
+a.c1:link{color: #FFFFFF;}
+a.c1:visited{color: #FFFFFF;}
+a.c1:hover{color: #FFFFFF;}
+a.c2{color: #000000; font-size:13px}
+a.c2:visited{color: #000000;}
+a.c2:hover{color: #0a6d8b;}
+a.c3,a.c3:hover{color: #000000;}
+a.c4{color: #0a6d8b; font-size:12px}
+a.c4:visited{color: #0a6d8b;}
+a.c4:hover{color: #0a6d8b;}
+a.c5{color: #000000; font-size:14px}
+a.c5:visited{color: #000000;}
+a.c5:hover{color: #FF0033;}
+.STYLE1 {
+	font-size: 14px;
+	line-height: 1.5;
+}
+.STYLE2 {font-size: 13px}
+
+.box{
+      border: 1px inset;
+	  padding:0px;
+	  margin:0px;
+     }
+.box2{
+      border: 1px double;
+	  padding:0px;
+	  margin:0px;
+     }
+.button{
+        border:1px outset;
+		padding:0px;
+		margin:0px;
+         }
+.tbl{padding:3px 0px 0px 2px;}
+.bb{ font-size:12px;}
+.bd{ font-size:13px;}
+.bc{ font-size:14px;}
+.song {
+	font-family: "Î¢ÈíÑÅºÚ";
+	font-size: 15px;
+	font-style: normal;
+	font-weight: bold;
+}
+.input_text{ color: #999999;}
+.td_1 td{ border-bottom:1px dotted #000;}
+.sty1{ list-style:none; background:#eee;}
+.sty2{ list-style:none;background:#FFF;}

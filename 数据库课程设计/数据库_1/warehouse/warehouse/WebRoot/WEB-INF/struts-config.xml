@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+	<data-sources />
+	<form-beans>
+		<form-bean name="loginForm"
+			type="com.yourcompany.struts.form.LoginForm" />
+		<form-bean name="supplierForm"
+			type="com.yourcompany.struts.form.SupplierForm" />
+		<form-bean name="goodsForm"
+			type="com.yourcompany.struts.form.goodsForm" />
+		<form-bean name="updateuserpasswordForm"
+			type="com.yourcompany.struts.form.UpdateuserpasswordForm" />
+		<form-bean name="stockIoForm" 
+			type="com.yourcompany.struts.form.StockIoForm" />
+			<form-bean name="goodstock" 
+			type="com.yourcompany.struts.form.goodstock" />
+			<form-bean name="InstoreInfo" 
+			type="com.yourcompany.struts.form.InstoreInfo" />
+			<form-bean name="goodsType" 
+			type="com.yourcompany.struts.form.goodsType" />	
+	</form-beans>
+
+	<global-exceptions>
+		<exception key="error.exception"
+			type="com.yourcompany.struts.Exception.AppException"
+			handler="com.yourcompany.struts.ExceptionHandler.AppExceptionHandler"
+			path="/index.jsp" />
+	</global-exceptions>
+
+	<global-forwards>
+		<forward name="error" path="/error.jsp"></forward>
+		<forward name="success3" path="/main_3.jsp"></forward>
+		<forward name="success1" path="/main_1.jsp"></forward>
+		<forward name="success2" path="/main_2.jsp"></forward>
+	</global-forwards>
+
+	<action-mappings>
+
+		<action path="/login"
+			type="com.yourcompany.struts.action.LoginAction" name="loginForm">
+		</action>
+
+		<action path="/employee"
+			type="com.yourcompany.struts.action.EmployeeAction"
+			name="updateuserpasswordForm" parameter="method">
+			<exception key="error.exception"
+				type="com.yourcompany.struts.Exception.AppException"
+				handler="com.yourcompany.struts.ExceptionHandler.AppExceptionHandler"
+				path="/myinfo/updateuserpassword.jsp" />
+			<forward name="viewEmployeeInfo"
+				path="/myinfo/viewEmployeeInfo.jsp">
+			</forward>	
+			<forward name="updateuserpassword"
+				path="/myinfo/updateuserpassword.jsp">
+			</forward>
+			<forward name="successinpsw"
+				path="/welcome.jsp">
+			</forward>
+			<forward name="viewAllEmployeeInfo"
+				path="/viewAllEmployeeInfo.jsp">
+			</forward>
+		</action>
+
+		<action path="/goods"
+			type="com.yourcompany.struts.action.GoodsAction" name="goodsForm"
+			parameter="method">
+			<forward name="allgoods" path="/goods/allgoods.jsp"></forward>
+			<forward name="addgoods" path="/welcome.jsp"></forward>
+			<forward name="delgoods" path="/goods.do?method=allgoods"></forward>
+		</action>
+
+		<action path="/register"
+			type="com.yourcompany.struts.action.RegisterAction"
+			name="loginForm">
+			<forward name="scs" path="/scs.jsp"></forward>
+		</action>
+
+	<action path="/supplier"
+			type="com.yourcompany.struts.action.SupplierAction"
+			parameter="method" name="supplierForm">
+			<forward name="queryAllSupplier"
+				path="/supplier/queryAllSupplier.jsp">
+			</forward>
+			<forward name="addSupplier" path="/welcome.jsp"></forward>
+			<forward name="delSupplier" path="/supplier.do?method=queryAllSupplier"></forward>
+	</action>
+	    <action path="/operation" type="com.yourcompany.struts.action.OperationAction"  parameter="method" >
+    	<forward name="alloperation" path="/operation/alloperation.jsp"></forward>
+    	<forward name="allexception" path="/operation/allexception.jsp"></forward>
+    </action>
+    <action path="/goodstype" type="com.yourcompany.struts.action.GoodsTypeAction" parameter="method" name="goodsType">
+    	<forward name="allgoodstype" path="/goods/goodstype.jsp"></forward>
+    	<forward name="delgoodstype" path="/goodstype.do?method=allgoodstype"></forward>
+    </action>
+
+    <action path="/instore" type="com.yourcompany.struts.action.InstoreInfoAction" parameter="method" name="InstoreInfo">
+    	<forward name="allinstore" path="/store/instore.jsp"></forward>
+    	<forward name="delinstore" path="/instore.do?method=allinstore"></forward>
+    	<forward name="allstore" path="/store/store.jsp"></forward>
+    	<forward name="getId" path="/store/update.jsp"></forward>
+    	<forward name="updstore" path="/instore.do?method=allstore"></forward>
+    </action>
+    
+    <action path="/goodsstock" type="com.yourcompany.struts.action.GoodsstockAction" parameter="method" name="goodstock">
+    	<forward name="allgoodsstock" path="/store/stock.jsp"></forward>
+    	<forward name="delgoodsstock" path="/goodsstock.do?method=allgoodsstock"></forward>
+    </action>
+    
+    <action path="/stockIo" 
+        parameter="method"
+        type="com.yourcompany.struts.action.StockIoAction" name="stockIoForm" >
+        <exception key="error.exception"
+				type="com.yourcompany.struts.Exception.AppException"
+				handler="com.yourcompany.struts.ExceptionHandler.AppExceptionHandler"
+				path="/StockOut/addStockOut.jsp" />
+        <forward name="viewStockIo"
+		   path="/StockIn/viewStockIo.jsp">
+	     </forward>
+	     <forward name="viewStockOut"
+		   path="/StockOut/viewStockOut.jsp">
+	     </forward>
+	     <forward name="pdsuccess"
+		   path="/pd/pdsuccess.jsp">
+	     </forward>
+	 <forward name="viewpd"
+		   path="/pd/viewpd.jsp">
+	     </forward>
+	     <forward name="addStockIo" path="stockIo.do?method=viewStockIo"></forward>
+	     <forward name="viewstockinoperation" path="/StockIn/viewstockinoperation.jsp"></forward>
+	     <forward name="viewstockoperation" path="/StockOut/viewstockoperation.jsp"></forward>
+	     <forward name="viewpdoperation" path="/StockIn/viewpdoperation.jsp"></forward>
+	     <forward name="allin" path="/StockIn/allin.jsp"></forward>
+	     <forward name="updin" path="/stockIo.do?method=allin"></forward> 
+    </action>
+    <action path="/invoice" type="com.yourcompany.struts.action.InvoiceAction" parameter="method">
+    	<forward name="allout" path="/operation/allout.jsp"></forward>
+    	<forward name="updout" path="/invoice.do?method=allout"></forward>
+    </action>
+    
+	</action-mappings>
+
+	<message-resources
+		parameter="com.yourcompany.struts.ApplicationResources" />
+</struts-config>
+

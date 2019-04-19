@@ -1,0 +1,5 @@
+create view	TopGoods
+as
+select	top	10	*	
+from	Goods
+order	by	GNowStock desc

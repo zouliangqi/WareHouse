@@ -1,0 +1,11 @@
+create table Orders
+(Ono	char(20)	primary key,
+Cno	char(5)	not null,
+Gno	char(7)	not null,
+Bno	char(6)	not null,
+Odate	Date	not null,
+Onumber	int	check(Onumber>0),
+Omoney	float	check(Omoney>0),
+foreign	key	(Cno)	references	Classification(Cno) ,
+foreign	key	(Gno)	references	Goods(Gno) ,
+foreign	key	(Bno)	references	Buyer(Bno) ,)

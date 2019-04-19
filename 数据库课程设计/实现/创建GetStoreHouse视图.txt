@@ -1,0 +1,4 @@
+create view	GetStoreHouse
+as
+select	Sno ²Ö¿â±àºÅ,Sname ²Ö¿âÃû
+from	Storehouse

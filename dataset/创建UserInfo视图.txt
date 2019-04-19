@@ -1,0 +1,4 @@
+create view	UserInfo
+as
+select	Ano Id,Aname 姓名,Aremark 备注,Alevel 等级
+from	Administrator 

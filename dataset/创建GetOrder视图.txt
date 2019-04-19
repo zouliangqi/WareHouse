@@ -1,0 +1,4 @@
+create view	GetOrder
+as
+select	*	
+from	Orders

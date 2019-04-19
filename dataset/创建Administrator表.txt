@@ -1,0 +1,9 @@
+create table Administrator
+(Ano char(6) primary key,
+Aname Varchar(50)	not null,
+Apassword Varchar(20)	not null,
+Aip	Varchar(20)	not null,
+Astatus	Varchar(10)	not	null,
+Aremark	Varchar(100),
+Alevel	int	check(Alevel>0),
+)

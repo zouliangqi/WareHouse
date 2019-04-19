@@ -1,0 +1,11 @@
+create table Goods
+(Gno	char(7)	primary key,
+Sno	char(3)	not null,
+Cno	char(5)	not null,
+Gname	Varchar(20)	not null,
+GStockLimit	int	check(GStockLimit>=0),
+GNowStock	int	check(GNowStock>=0),
+Gremark	Varchar(100),
+Gprice	float	check(Gprice>0),
+foreign	key	(Sno)	references	Storehouse(Sno) on update cascade,
+foreign	key	(Cno)	references	Classification(Cno) on update cascade,)

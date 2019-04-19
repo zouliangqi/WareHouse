@@ -1,0 +1,6 @@
+create table Storehouse
+(Sno	char(3)	primary key,
+Ano	char(6)	not null,
+Sname	Varchar(20)	not null,
+Sremark	Varchar(100),
+foreign	key	(Ano)	references	Administrator(Ano),)

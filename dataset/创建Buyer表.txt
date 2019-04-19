@@ -1,0 +1,5 @@
+create table Buyer
+(Bno	char(6)	primary key,
+Bname	Varchar(20)	not null,
+Bremark	Varchar(100),
+)
